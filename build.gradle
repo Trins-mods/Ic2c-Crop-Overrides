@@ -51,6 +51,9 @@ repositories{
         name = "jared"
         url = "http://maven.blamejared.com"
     }
+    maven {
+        url "https://maven.chaosfield.at"
+    }
 }
 
 dependencies {
@@ -72,6 +75,7 @@ dependencies {
         exclude group: 'org.ow2.asm'
         exclude group: 'com.google.code.gson'
     }
+    deobfCompile "de.ellpeck.actuallyadditions:ActuallyAdditions:1.12.2-r144"
 }
 
 processResources {
