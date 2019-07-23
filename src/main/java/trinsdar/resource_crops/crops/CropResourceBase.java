@@ -88,6 +88,6 @@ public abstract class CropResourceBase extends CropCardBase {
     }
 
     public static boolean isBlockStateBelow(ICropTile tile, IBlockState state){
-        return tile.getWorldObj().getBlockState(tile.getPosition().down()).equals(state);
+        return tile.getWorldObj().getBlockState(tile.getPosition().down(2)) == state;
     }
 }
