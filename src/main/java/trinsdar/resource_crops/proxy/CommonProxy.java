@@ -5,6 +5,6 @@ import trinsdar.resource_crops.Crops;
 
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
-        Crops.preInit();
+        Crops.registerCrops();
     }
 }

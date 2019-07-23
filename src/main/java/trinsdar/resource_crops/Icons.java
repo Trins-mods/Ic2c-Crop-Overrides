@@ -9,7 +9,7 @@ public class Icons {
 
     @SideOnly(Side.CLIENT)
     public static void loadSprites(){
-        Ic2Icons.addSprite(new Sprites.SpriteData("crops", ResourceCrops.MODID + ":textures/sprites/crops.png", new Sprites.SpriteInfo(7, 1)));
+        Ic2Icons.addSprite(new Sprites.SpriteData("crops", ResourceCrops.MODID + ":textures/crops.png", new Sprites.SpriteInfo(7, 1)));
         Ic2Icons.addTextureEntry(new Sprites.TextureEntry("crops", 0, 0, 7, 1));
     }
 }

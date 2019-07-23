@@ -27,6 +27,11 @@ public abstract class CropResourceBase extends CropCardBase {
     }
 
     @Override
+    public String getDiscoveredBy() {
+        return "Oly2o6";
+    }
+
+    @Override
     public String getOwner() {
         return "resource";
     }
@@ -48,7 +53,7 @@ public abstract class CropResourceBase extends CropCardBase {
 
     @Override
     public ItemStack getGain(ICropTile iCropTile) {
-        return drop;
+        return drop.copy();
     }
 
     @Override

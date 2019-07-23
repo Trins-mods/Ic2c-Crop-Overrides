@@ -6,7 +6,9 @@ import ic2.core.block.crop.crops.CropAurelia;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import trinsdar.resource_crops.Crops;
 import trinsdar.resource_crops.crops.CropResourceBase;
 
 import java.util.List;
@@ -17,5 +19,8 @@ public class CropAurelia2 extends CropAurelia {
         return cropTile.getCurrentSize() < 3 || cropTile.getCurrentSize() == 3 && (CropResourceBase.isBlockStateBelow(cropTile, InitBlocks.blockCrystalEmpowered.getStateFromMeta(3)));
     }
 
-
+    @Override
+    public ItemStack getGain(ICropTile crop) {
+        return Crops.getModMetaItem("thermalfoundation", "material", 1, 1).copy();
+    }
 }
