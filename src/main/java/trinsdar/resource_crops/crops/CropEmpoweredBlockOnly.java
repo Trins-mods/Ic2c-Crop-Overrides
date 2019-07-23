@@ -7,18 +7,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.item.ItemStack;
 
-public class CropAABlockOnly extends CropResourceBase {
-    IBlockState blockUnderneath;
+public class CropEmpoweredBlockOnly extends CropResourceBase {
+    int meta;
 
-    public CropAABlockOnly(String id, int tier, int colorful, String[] attributes, IBlockState blockUnderneath, ItemStack drop, int firstDuration, int secondDuration, int index) {
+    public CropEmpoweredBlockOnly(String id, int tier, int colorful, String[] attributes, int meta, ItemStack drop, int firstDuration, int secondDuration, int index) {
         super(id, tier, 2, 0, 0, colorful, 0, attributes, drop, firstDuration, secondDuration, index);
-        this.blockUnderneath = blockUnderneath;
-
+        this.meta = meta;
     }
 
     @Override
     public boolean canGrow(ICropTile cropTile) {
-        return cropTile.getCurrentSize() < 3 || cropTile.getCurrentSize() == 3 && (CropResourceBase.isBlockStateBelow(cropTile, blockUnderneath));
+        return cropTile.getCurrentSize() < 3 || cropTile.getCurrentSize() == 3 && (isBlockStateBelow(cropTile, InitBlocks.blockCrystalEmpowered.getStateFromMeta(meta)));
     }
 
 
