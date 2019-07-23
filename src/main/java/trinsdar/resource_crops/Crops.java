@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Crops {
-    private static Map<CropCard, ItemStack> toRegister = new HashMap<>();
+    private static Map<CropCard, ItemStack> toRegister = new LinkedHashMap<>();
     public static CropCard cropDiamahlia = registerCrop(new CropEmpoweredBlockOnly("Diamahlia", 10, 3, new String[]{"Cyan", "Leaves", "Metal", "Gem"}, 2, new ItemStack(Items.DIAMOND), 1400, 2600, 0), new ItemStack(Items.DIAMOND));
     public static CropCard cropEmeryllis = registerCrop(new CropEmpoweredBlockOnly("Emeryllis", 10, 3, new String[]{"Green", "Leaves", "Metal", "Gem"}, 4, new ItemStack(Items.EMERALD), 1400, 2600, 1), new ItemStack(Items.EMERALD));
     public static CropCard cropBauxia = registerCrop(new CropOreAndBlock("Bauxia", 6, 1, new String[]{"LightGray", "Leaves", "Metal"}, getModMetaItem("thermalfoundation", "material", 68, 1), 800, 2000, "Aluminum", 2), getModMetaItem("thermalfoundation", "material", 68, 1));
@@ -43,9 +43,8 @@ public class Crops {
         return new ItemStack(Item.getByNameOrId(pair), amount);
     }
 
-
-    public static ItemStack getModMetaItem(String modname, String itemid, int meta, int size) {
+    public static ItemStack getModMetaItem(String modname, String itemid, int meta, int amount) {
         String pair = modname + ":" + itemid;
-        return GameRegistry.makeItemStack(pair, meta, size, null);
+        return new ItemStack(Item.getByNameOrId(pair), amount, meta);
     }
 }

@@ -20,7 +20,7 @@ public class ResourceCrops {
     public static final String MODID = "resource_crops";
     public static final String NAME = "Resource Crops";
     public static final String VERSION = "@VERSION@";
-    public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;after:actuallyadditions";
+    public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;required-after:actuallyadditions;required-after:thermalfoundation;required-after:mekanism";
 
     @SidedProxy(clientSide = "trinsdar." + MODID + ".proxy.ClientProxy", serverSide = "trinsdar." + MODID + ".proxy.CommonProxy")
     public static CommonProxy proxy;
@@ -39,7 +39,7 @@ public class ResourceCrops {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
         proxy.preInit(event);
-        Ic2Crops crops = new Ic2Crops();
+        Ic2Crops crops = Ic2Crops.instance;
         System.out.println(Crops.getModMetaItem("thermalfoundation", "material", 66, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropArgentum, Crops.getModMetaItem("thermalfoundation", "material", 66, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropAurelia, Crops.getModMetaItem("thermalfoundation", "material", 1, 1));
