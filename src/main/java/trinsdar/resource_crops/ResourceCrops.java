@@ -1,13 +1,21 @@
 package trinsdar.resource_crops;
 
+import de.ellpeck.actuallyadditions.mod.items.InitItems;
+import ic2.api.classic.recipe.ClassicRecipes;
 import ic2.core.block.crop.Ic2Crops;
+import ic2.core.block.machine.low.TileEntityMacerator;
+import ic2.core.platform.registry.Ic2Items;
+import ic2.core.util.misc.StackUtil;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import trinsdar.ic2c_extras.util.Registry;
 import trinsdar.resource_crops.crops.ic2overrides.CropArgentum2;
 import trinsdar.resource_crops.crops.ic2overrides.CropAurelia2;
 import trinsdar.resource_crops.crops.ic2overrides.CropBlueWheat2;
+import trinsdar.resource_crops.crops.ic2overrides.CropCoffee2;
 import trinsdar.resource_crops.crops.ic2overrides.CropFerru2;
 import trinsdar.resource_crops.crops.ic2overrides.CropMalachite2;
 import trinsdar.resource_crops.crops.ic2overrides.CropPlumbilia2;
@@ -34,6 +42,7 @@ public class ResourceCrops {
         Ic2Crops.cropStannum = new CropStannum2();
         Ic2Crops.cropBluewheat = new CropBlueWheat2();
         Ic2Crops.cropRedwheat = new CropRedWheat2();
+        Ic2Crops.cropCoffee = new CropCoffee2();
     }
 
     @Mod.EventHandler
@@ -47,5 +56,12 @@ public class ResourceCrops {
         crops.registerCropDisplayItem(Ic2Crops.cropMalachite, Crops.getModMetaItem("thermalfoundation", "material", 64, 1));
         crops.registerCropDisplayItem(Registry.cropPlumbilia, Crops.getModMetaItem("thermalfoundation", "material", 67, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropStannum, Crops.getModMetaItem("thermalfoundation", "material", 65, 1));
+        crops.registerCropDisplayItem(Ic2Crops.cropCoffee, new ItemStack(InitItems.itemCoffeeBean));
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event){
+        ClassicRecipes.advCrafting.addShapelessRecipe(Ic2Items.coffeePowder, InitItems.itemCoffeeBean);
+        TileEntityMacerator.addRecipe(new ItemStack(InitItems.itemCoffeeBean), StackUtil.copyWithSize(Ic2Items.coffeePowder, 3));
     }
 }
