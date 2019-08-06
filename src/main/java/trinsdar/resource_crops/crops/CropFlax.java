@@ -10,14 +10,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class CropCanola extends CropCardBase {
-    public CropCanola() {
-        super(new CropProperties(2, 1, 1, 0, 5, 1));
+public class CropFlax extends CropCardBase {
+    public CropFlax() {
+        super(new CropProperties(2, 1, 2, 0, 3, 0));
     }
 
     @SideOnly(Side.CLIENT)
     public TextureAtlasSprite getTexture(int state) {
-        return this.getSprite("block_canola_stage_" + state)[0];
+        return this.getSprite("block_flax_stage_" + state)[0];
     }
 
     @Override
@@ -27,7 +27,7 @@ public class CropCanola extends CropCardBase {
 
     @Override
     public String getId() {
-        return "canola";
+        return "flax";
     }
 
     @Override
@@ -42,12 +42,12 @@ public class CropCanola extends CropCardBase {
 
     @Override
     public int getMaxSize() {
-        return 4;
+        return 6;
     }
 
     @Override
     public String[] getAttributes() {
-        return new String[]{"Canola", "Flower", "Yellow"};
+        return new String[]{"Magenta", "Leaves", "Ingredient"};
     }
 
     @Override
@@ -57,31 +57,31 @@ public class CropCanola extends CropCardBase {
 
     @Override
     public boolean canBeHarvested(ICropTile cropTile) {
-        return cropTile.getCurrentSize() == 4;
+        return cropTile.getCurrentSize() == 6;
     }
 
     @Override
     public ItemStack getGain(ICropTile crop) {
-        return new ItemStack(InitItems.itemMisc, 1, 13);
+        return new ItemStack(Items.STRING, 1);
     }
 
     @Override
     public ItemStack getSeeds(ICropTile crop) {
-        return new ItemStack(InitItems.itemCanolaSeed);
+        return new ItemStack(InitItems.itemFlaxSeed);
     }
 
     @Override
     public int getSizeAfterHarvest(ICropTile cropTile) {
-        return 3;
+        return 4;
     }
 
     @Override
     public int getGrowthDuration(ICropTile cropTile) {
-        return cropTile.getCurrentSize() == 3 ? 600 : 400;
+        return cropTile.getCurrentSize() < 4 ? 300 : 200;
     }
 
     @Override
     public int getOptimalHarvestSize(ICropTile cropTile) {
-        return 4;
+        return 6;
     }
 }
