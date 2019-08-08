@@ -37,6 +37,13 @@ public class Crops {
             crop.registerCrop(card);
             crop.registerCropDisplayItem(card, toRegister.get(card));
         }
+
+    }
+
+    public static void registerSeeds(){
+        ClassicCrops crop = ClassicCrops.instance;
+        crop.registerCropDisplayItem(cropCanola, toRegister.get(cropCanola));
+        crop.registerCropDisplayItem(cropRice, toRegister.get(cropRice));
         crop.registerBaseSeed(new ItemStack(InitItems.itemCanolaSeed), cropCanola,  1, 1, 1, 1);
         crop.registerBaseSeed(new ItemStack(InitItems.itemFlaxSeed), cropFlax, 1, 1, 1, 1);
         crop.registerBaseSeed(new ItemStack(InitItems.itemRiceSeed), cropRice, 1, 1, 1, 1);
