@@ -30,7 +30,7 @@ public class Icons {
     }
 
     public static void createAASprite(String id){
-        Ic2Icons.addSprite(new Sprites.SpriteData(id, "actuallyadditions:blocks/" + id + ".png", new Sprites.SpriteInfo(1, 1)));
+        Ic2Icons.addSprite(new Sprites.SpriteData(id, "actuallyadditions:textures/blocks/" + id + ".png", new Sprites.SpriteInfo(1, 1)));
         Ic2Icons.addTextureEntry(new Sprites.TextureEntry(id, 0, 0, 1, 1));
     }
 }
