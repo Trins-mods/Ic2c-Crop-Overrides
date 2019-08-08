@@ -52,7 +52,7 @@ public class CropFlax extends CropCardBase {
 
     @Override
     public boolean canGrow(ICropTile cropTile) {
-        return cropTile.getCurrentSize() <= 3 && cropTile.getLightLevel() >= 10;
+        return cropTile.getCurrentSize() <= 5 && cropTile.getLightLevel() >= 10;
     }
 
     @Override

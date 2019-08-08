@@ -1,6 +1,5 @@
 package trinsdar.resource_crops;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.crops.ClassicCrops;
 import ic2.api.crops.CropCard;

@@ -53,7 +53,7 @@ public class CropRice extends CropCardBase {
 
     @Override
     public boolean canGrow(ICropTile cropTile) {
-        return cropTile.getCurrentSize() <= 3 && cropTile.getLightLevel() >= 10 && cropTile.getTerrainHumidity() >= 10;
+        return cropTile.getCurrentSize() <= 6 && cropTile.getLightLevel() >= 10 && cropTile.getTerrainHumidity() >= 10;
     }
 
     @Override
