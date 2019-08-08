@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import trinsdar.ic2c_extras.util.Registry;
 import trinsdar.resource_crops.crops.ic2overrides.CropArgentum2;
@@ -49,19 +50,23 @@ public class ResourceCrops {
     public void preInit(FMLPreInitializationEvent event){
         proxy.preInit(event);
         Ic2Crops crops = Ic2Crops.instance;
-        System.out.println(Crops.getModMetaItem("thermalfoundation", "material", 66, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropArgentum, Crops.getModMetaItem("thermalfoundation", "material", 66, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropAurelia, Crops.getModMetaItem("thermalfoundation", "material", 1, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropFerru, Crops.getModMetaItem("thermalfoundation", "material", 0, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropMalachite, Crops.getModMetaItem("thermalfoundation", "material", 64, 1));
         crops.registerCropDisplayItem(Registry.cropPlumbilia, Crops.getModMetaItem("thermalfoundation", "material", 67, 1));
         crops.registerCropDisplayItem(Ic2Crops.cropStannum, Crops.getModMetaItem("thermalfoundation", "material", 65, 1));
-        crops.registerCropDisplayItem(Ic2Crops.cropCoffee, new ItemStack(InitItems.itemCoffeeBean));
+
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         ClassicRecipes.advCrafting.addShapelessRecipe(Ic2Items.coffeePowder, InitItems.itemCoffeeBean);
         TileEntityMacerator.addRecipe(new ItemStack(InitItems.itemCoffeeBean), StackUtil.copyWithSize(Ic2Items.coffeePowder, 3));
+    }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event){
+        Ic2Crops.instance.registerCropDisplayItem(Ic2Crops.cropCoffee, new ItemStack(InitItems.itemCoffeeBean));
     }
 }
