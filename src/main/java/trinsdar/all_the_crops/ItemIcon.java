@@ -1,4 +1,4 @@
-package trinsdar.resource_crops;
+package trinsdar.all_the_crops;
 
 import ic2.core.platform.textures.Ic2Icons;
 import ic2.core.platform.textures.obj.IStaticTexturedItem;
@@ -6,7 +6,6 @@ import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import trinsdar.ic2c_extras.IC2CExtras;
 
 import java.util.Arrays;
 import java.util.List;

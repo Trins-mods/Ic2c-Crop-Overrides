@@ -1,24 +1,22 @@
-package trinsdar.resource_crops.crops;
+package trinsdar.all_the_crops.crops;
 
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.crops.CropProperties;
 import ic2.api.crops.ICropTile;
 import ic2.core.block.crop.crops.CropCardBase;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class CropRice extends CropCardBase {
-    public CropRice() {
-        super(new CropProperties(1, 0, 4, 0, 1, 1));
+public class CropCanola extends CropCardBase {
+    public CropCanola() {
+        super(new CropProperties(2, 1, 1, 0, 5, 1));
     }
 
     @SideOnly(Side.CLIENT)
     public TextureAtlasSprite getTexture(int state) {
-        int secondState = state - 1;
-        return state < 3 ? this.getSprite("block_rice_stage_" + state)[0] : this.getSprite("block_rice_stage_" + secondState)[0];
+        return this.getSprite("block_canola_stage_" + state)[0];
     }
 
     @Override
@@ -28,7 +26,7 @@ public class CropRice extends CropCardBase {
 
     @Override
     public String getId() {
-        return "rice";
+        return "canola";
     }
 
     @Override
@@ -43,46 +41,46 @@ public class CropRice extends CropCardBase {
 
     @Override
     public int getMaxSize() {
-        return 7;
+        return 4;
     }
 
     @Override
     public String[] getAttributes() {
-        return new String[]{"White", "Rice", "Food", "Wheat"};
+        return new String[]{"Canola", "Flower", "Yellow"};
     }
 
     @Override
     public boolean canGrow(ICropTile cropTile) {
-        return cropTile.getCurrentSize() <= 6 && cropTile.getLightLevel() >= 10 && cropTile.getTerrainHumidity() >= 10;
+        return cropTile.getCurrentSize() <= 3 && cropTile.getLightLevel() >= 10;
     }
 
     @Override
     public boolean canBeHarvested(ICropTile cropTile) {
-        return cropTile.getCurrentSize() == 7;
+        return cropTile.getCurrentSize() == 4;
     }
 
     @Override
     public ItemStack getGain(ICropTile crop) {
-        return new ItemStack(InitItems.itemFoods, 1, 16);
+        return new ItemStack(InitItems.itemMisc, 1, 13);
     }
 
     @Override
     public ItemStack getSeeds(ICropTile crop) {
-        return new ItemStack(InitItems.itemRiceSeed);
+        return new ItemStack(InitItems.itemCanolaSeed);
     }
 
     @Override
     public int getSizeAfterHarvest(ICropTile cropTile) {
-        return 2;
+        return 3;
     }
 
     @Override
     public int getGrowthDuration(ICropTile cropTile) {
-        return 200;
+        return cropTile.getCurrentSize() == 3 ? 600 : 400;
     }
 
     @Override
     public int getOptimalHarvestSize(ICropTile cropTile) {
-        return 7;
+        return 4;
     }
 }

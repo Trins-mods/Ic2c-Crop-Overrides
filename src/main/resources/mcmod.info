@@ -1,8 +1,8 @@
 [
 {
-   "modid": "resource_crops",
-   "name": "Resource Crops",
-   "description": "Resource Crops made for the all the mods 3 expert pack.",
+   "modid": "all_the_crops",
+   "name": "All the Crops",
+   "description": "Various Crops made for the all the mods 3 expert pack.",
    "version": "${modversion}",
    "mcversion": "${mcversion}",
    "url": "",

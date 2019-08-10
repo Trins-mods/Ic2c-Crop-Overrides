@@ -1,10 +1,10 @@
-package trinsdar.resource_crops.proxy;
+package trinsdar.all_the_crops.proxy;
 
 import ic2.core.platform.textures.Ic2Icons;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import trinsdar.resource_crops.Icons;
+import trinsdar.all_the_crops.Icons;
 
 public class ClientProxy extends CommonProxy {
     @Override

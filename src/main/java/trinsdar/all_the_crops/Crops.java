@@ -1,6 +1,5 @@
-package trinsdar.resource_crops;
+package trinsdar.all_the_crops;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.crops.ClassicCrops;
 import ic2.api.crops.CropCard;
@@ -10,13 +9,13 @@ import mekanism.common.MekanismItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import trinsdar.resource_crops.crops.CropCanola;
-import trinsdar.resource_crops.crops.CropEmpoweredBlockOnly;
-import trinsdar.resource_crops.crops.CropBlockOnly;
-import trinsdar.resource_crops.crops.CropFlax;
-import trinsdar.resource_crops.crops.CropMiscBlockOnly;
-import trinsdar.resource_crops.crops.CropHardenedGlass;
-import trinsdar.resource_crops.crops.CropRice;
+import trinsdar.all_the_crops.crops.CropCanola;
+import trinsdar.all_the_crops.crops.CropEmpoweredBlockOnly;
+import trinsdar.all_the_crops.crops.CropBlockOnly;
+import trinsdar.all_the_crops.crops.CropFlax;
+import trinsdar.all_the_crops.crops.CropMiscBlockOnly;
+import trinsdar.all_the_crops.crops.CropHardenedGlass;
+import trinsdar.all_the_crops.crops.CropRice;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

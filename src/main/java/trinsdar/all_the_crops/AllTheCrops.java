@@ -1,4 +1,4 @@
-package trinsdar.resource_crops;
+package trinsdar.all_the_crops;
 
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.recipe.ClassicRecipes;
@@ -10,24 +10,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import trinsdar.ic2c_extras.util.Registry;
-import trinsdar.resource_crops.crops.ic2overrides.CropArgentum2;
-import trinsdar.resource_crops.crops.ic2overrides.CropAurelia2;
-import trinsdar.resource_crops.crops.ic2overrides.CropBlueWheat2;
-import trinsdar.resource_crops.crops.ic2overrides.CropCoffee2;
-import trinsdar.resource_crops.crops.ic2overrides.CropFerru2;
-import trinsdar.resource_crops.crops.ic2overrides.CropMalachite2;
-import trinsdar.resource_crops.crops.ic2overrides.CropPlumbilia2;
-import trinsdar.resource_crops.crops.ic2overrides.CropRedWheat2;
-import trinsdar.resource_crops.crops.ic2overrides.CropStannum2;
-import trinsdar.resource_crops.proxy.CommonProxy;
+import trinsdar.all_the_crops.crops.ic2overrides.CropArgentum2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropAurelia2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropBlueWheat2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropCoffee2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropFerru2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropMalachite2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropPlumbilia2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropRedWheat2;
+import trinsdar.all_the_crops.crops.ic2overrides.CropStannum2;
+import trinsdar.all_the_crops.proxy.CommonProxy;
 
-@Mod(modid = ResourceCrops.MODID, name = ResourceCrops.NAME, version = ResourceCrops.VERSION, dependencies = ResourceCrops.DEPENDS)
-public class ResourceCrops {
-    public static final String MODID = "resource_crops";
-    public static final String NAME = "Resource Crops";
+@Mod(modid = AllTheCrops.MODID, name = AllTheCrops.NAME, version = AllTheCrops.VERSION, dependencies = AllTheCrops.DEPENDS)
+public class AllTheCrops {
+    public static final String MODID = "all_the_crops";
+    public static final String NAME = "All The Crops";
     public static final String VERSION = "@VERSION@";
     public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;required-after:actuallyadditions;required-after:thermalfoundation;required-after:mekanism";
 

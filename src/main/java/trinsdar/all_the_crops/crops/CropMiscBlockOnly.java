@@ -1,4 +1,4 @@
-package trinsdar.resource_crops.crops;
+package trinsdar.all_the_crops.crops;
 
 import de.ellpeck.actuallyadditions.mod.blocks.InitBlocks;
 import ic2.api.crops.ICropTile;

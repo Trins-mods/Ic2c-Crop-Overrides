@@ -1,10 +1,7 @@
-package trinsdar.resource_crops.crops;
+package trinsdar.all_the_crops.crops;
 
 import de.ellpeck.actuallyadditions.mod.blocks.InitBlocks;
-import ic2.api.crops.CropProperties;
 import ic2.api.crops.ICropTile;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.item.ItemStack;
 
 public class CropEmpoweredBlockOnly extends CropResourceBase {

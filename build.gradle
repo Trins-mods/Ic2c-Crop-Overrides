@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "${mod_version}"
-group = "trinsdar.resource_crops" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Resource Crops"
+group = "trinsdar.all_the_crops" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "AllTheCrops"
 
 
 
@@ -30,7 +30,7 @@ minecraft {
     mappings = "${mappings_version}"
 
     replace "@VERSION@", project.version
-    replaceIn "ResourceCrops.java"
+    replaceIn "AllTheCrops.java"
 
 }
 
