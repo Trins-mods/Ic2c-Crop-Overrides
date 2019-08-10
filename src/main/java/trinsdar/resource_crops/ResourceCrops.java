@@ -65,9 +65,4 @@ public class ResourceCrops {
         TileEntityMacerator.addRecipe(new ItemStack(InitItems.itemCoffeeBean), StackUtil.copyWithSize(Ic2Items.coffeePowder, 3));
         Crops.registerSeeds();
     }
-
-    @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event){
-        Ic2Crops.instance.registerCropDisplayItem(Ic2Crops.cropCoffee, new ItemStack(InitItems.itemCoffeeBean));
-    }
 }
