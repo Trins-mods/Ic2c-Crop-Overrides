@@ -1,5 +1,6 @@
 package trinsdar.resource_crops;
 
+import com.sun.org.apache.xml.internal.security.Init;
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.crops.ClassicCrops;
 import ic2.api.crops.CropCard;
@@ -55,6 +56,7 @@ public class Crops {
         crop.registerBaseSeed(new ItemStack(InitItems.itemCanolaSeed), cropCanola,  1, 1, 1, 1);
         crop.registerBaseSeed(new ItemStack(InitItems.itemFlaxSeed), cropFlax, 1, 1, 1, 1);
         crop.registerBaseSeed(new ItemStack(InitItems.itemRiceSeed), cropRice, 1, 1, 1, 1);
+        crop.registerBaseSeed(new ItemStack(InitItems.itemCoffeeSeed), Ic2Crops.cropCoffee, 1, 1, 1, 1);
     }
 
     public static CropCard registerCrop(CropCard card, ItemStack displayItem){

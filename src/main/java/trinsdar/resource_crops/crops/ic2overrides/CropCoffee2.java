@@ -10,4 +10,9 @@ public class CropCoffee2 extends CropCoffee {
     public ItemStack getGain(ICropTile crop) {
         return new ItemStack(InitItems.itemCoffeeBean);
     }
+
+    @Override
+    public ItemStack getSeeds(ICropTile crop) {
+        return new ItemStack(InitItems.itemCoffeeSeed);
+    }
 }
