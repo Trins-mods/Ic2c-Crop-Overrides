@@ -28,7 +28,7 @@ public class AllTheCrops {
     public static final String MODID = "all_the_crops";
     public static final String NAME = "All The Crops";
     public static final String VERSION = "@VERSION@";
-    public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;required-after:actuallyadditions;required-after:thermalfoundation;required-after:mekanism";
+    public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;required-after:actuallyadditions;required-after:thermalfoundation;required-after:mekanism;required-after:ic2c_extras";
 
     @SidedProxy(clientSide = "trinsdar." + MODID + ".proxy.ClientProxy", serverSide = "trinsdar." + MODID + ".proxy.CommonProxy")
     public static CommonProxy proxy;
