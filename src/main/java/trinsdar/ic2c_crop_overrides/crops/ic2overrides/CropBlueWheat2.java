@@ -1,9 +1,9 @@
-package trinsdar.all_the_crops.crops.ic2overrides;
+package trinsdar.ic2c_crop_overrides.crops.ic2overrides;
 
 import de.ellpeck.actuallyadditions.mod.blocks.InitBlocks;
 import ic2.api.crops.ICropTile;
 import ic2.core.block.crop.crops.CropBlueWheat;
-import trinsdar.all_the_crops.crops.CropResourceBase;
+import trinsdar.ic2c_crop_overrides.crops.CropResourceBase;
 
 public class CropBlueWheat2 extends CropBlueWheat {
     @Override

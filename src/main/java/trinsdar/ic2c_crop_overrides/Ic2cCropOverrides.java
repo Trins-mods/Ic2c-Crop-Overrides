@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops;
+package trinsdar.ic2c_crop_overrides;
 
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.recipe.ClassicRecipes;
@@ -12,21 +12,21 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import trinsdar.ic2c_extras.util.Registry;
-import trinsdar.all_the_crops.crops.ic2overrides.CropArgentum2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropAurelia2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropBlueWheat2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropCoffee2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropFerru2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropMalachite2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropPlumbilia2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropRedWheat2;
-import trinsdar.all_the_crops.crops.ic2overrides.CropStannum2;
-import trinsdar.all_the_crops.proxy.CommonProxy;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropArgentum2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropAurelia2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropBlueWheat2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropCoffee2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropFerru2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropMalachite2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropPlumbilia2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropRedWheat2;
+import trinsdar.ic2c_crop_overrides.crops.ic2overrides.CropStannum2;
+import trinsdar.ic2c_crop_overrides.proxy.CommonProxy;
 
-@Mod(modid = AllTheCrops.MODID, name = AllTheCrops.NAME, version = AllTheCrops.VERSION, dependencies = AllTheCrops.DEPENDS)
-public class AllTheCrops {
-    public static final String MODID = "all_the_crops";
-    public static final String NAME = "All The Crops";
+@Mod(modid = Ic2cCropOverrides.MODID, name = Ic2cCropOverrides.NAME, version = Ic2cCropOverrides.VERSION, dependencies = Ic2cCropOverrides.DEPENDS)
+public class Ic2cCropOverrides {
+    public static final String MODID = "ic2c_crop_overrides";
+    public static final String NAME = "Ic2c Crop Overrides";
     public static final String VERSION = "@VERSION@";
     public static final String DEPENDS = "required-after:ic2;required-after:ic2-classic-spmod;required-after:actuallyadditions;required-after:thermalfoundation;required-after:mekanism;required-after:ic2c_extras";
 

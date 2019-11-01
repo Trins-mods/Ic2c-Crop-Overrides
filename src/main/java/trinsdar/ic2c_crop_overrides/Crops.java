@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops;
+package trinsdar.ic2c_crop_overrides;
 
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.classic.crops.ClassicCrops;
@@ -9,13 +9,13 @@ import mekanism.common.MekanismItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import trinsdar.all_the_crops.crops.CropCanola;
-import trinsdar.all_the_crops.crops.CropEmpoweredBlockOnly;
-import trinsdar.all_the_crops.crops.CropBlockOnly;
-import trinsdar.all_the_crops.crops.CropFlax;
-import trinsdar.all_the_crops.crops.CropMiscBlockOnly;
-import trinsdar.all_the_crops.crops.CropHardenedGlass;
-import trinsdar.all_the_crops.crops.CropRice;
+import trinsdar.ic2c_crop_overrides.crops.CropCanola;
+import trinsdar.ic2c_crop_overrides.crops.CropEmpoweredBlockOnly;
+import trinsdar.ic2c_crop_overrides.crops.CropBlockOnly;
+import trinsdar.ic2c_crop_overrides.crops.CropFlax;
+import trinsdar.ic2c_crop_overrides.crops.CropMiscBlockOnly;
+import trinsdar.ic2c_crop_overrides.crops.CropHardenedGlass;
+import trinsdar.ic2c_crop_overrides.crops.CropRice;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

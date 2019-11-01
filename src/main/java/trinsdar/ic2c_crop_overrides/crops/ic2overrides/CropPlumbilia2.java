@@ -1,11 +1,11 @@
-package trinsdar.all_the_crops.crops.ic2overrides;
+package trinsdar.ic2c_crop_overrides.crops.ic2overrides;
 
 import cofh.thermalfoundation.init.TFBlocks;
 import ic2.api.crops.ICropTile;
 import net.minecraft.item.ItemStack;
 import trinsdar.ic2c_extras.blocks.CropPlumbilia;
-import trinsdar.all_the_crops.Crops;
-import trinsdar.all_the_crops.crops.CropResourceBase;
+import trinsdar.ic2c_crop_overrides.Crops;
+import trinsdar.ic2c_crop_overrides.crops.CropResourceBase;
 
 public class CropPlumbilia2 extends CropPlumbilia {
     @Override

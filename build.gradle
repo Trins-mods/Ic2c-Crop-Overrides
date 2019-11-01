@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "${mod_version}"
-group = "trinsdar.all_the_crops" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "AllTheCrops"
+group = "trinsdar.ic2c_crop_overrides" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Ic2cCropOverrides"
 
 
 
@@ -30,7 +30,7 @@ minecraft {
     mappings = "${mappings_version}"
 
     replace "@VERSION@", project.version
-    replaceIn "AllTheCrops.java"
+    replaceIn "Ic2cCropOverrides.java"
 
 }
 

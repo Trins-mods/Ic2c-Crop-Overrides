@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops.crops.ic2overrides;
+package trinsdar.ic2c_crop_overrides.crops.ic2overrides;
 
 import de.ellpeck.actuallyadditions.mod.items.InitItems;
 import ic2.api.crops.ICropTile;

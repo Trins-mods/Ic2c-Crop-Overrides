@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops;
+package trinsdar.ic2c_crop_overrides;
 
 import ic2.core.platform.textures.Ic2Icons;
 import ic2.core.platform.textures.Sprites;
@@ -9,7 +9,7 @@ public class Icons {
 
     @SideOnly(Side.CLIENT)
     public static void loadSprites(){
-        Ic2Icons.addSprite(new Sprites.SpriteData("crops", AllTheCrops.MODID + ":textures/crops.png", new Sprites.SpriteInfo(7, 1)));
+        Ic2Icons.addSprite(new Sprites.SpriteData("crops", Ic2cCropOverrides.MODID + ":textures/crops.png", new Sprites.SpriteInfo(7, 1)));
         Ic2Icons.addTextureEntry(new Sprites.TextureEntry("crops", 0, 0, 7, 1));
         createAABlockSprite("block_canola_stage_1");
         createAABlockSprite("block_canola_stage_2");

@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops.crops;
+package trinsdar.ic2c_crop_overrides.crops;
 
 import ic2.api.crops.CropProperties;
 import ic2.api.crops.ICropTile;

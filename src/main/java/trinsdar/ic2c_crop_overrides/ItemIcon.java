@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops;
+package trinsdar.ic2c_crop_overrides;
 
 import ic2.core.platform.textures.Ic2Icons;
 import ic2.core.platform.textures.obj.IStaticTexturedItem;

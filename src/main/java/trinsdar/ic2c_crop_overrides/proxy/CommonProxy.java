@@ -1,7 +1,7 @@
-package trinsdar.all_the_crops.proxy;
+package trinsdar.ic2c_crop_overrides.proxy;
 
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import trinsdar.all_the_crops.Crops;
+import trinsdar.ic2c_crop_overrides.Crops;
 
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {

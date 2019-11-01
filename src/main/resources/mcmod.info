@@ -1,8 +1,8 @@
 [
 {
-   "modid": "all_the_crops",
-   "name": "All the Crops",
-   "description": "Various Crops made for the all the mods 3 expert pack.",
+   "modid": "ic2c_crop_overrides",
+   "name": "Ic2c Crop Overrides",
+   "description": "Mod allowing overriding of ic2c crops through ic2c's json system.",
    "version": "${modversion}",
    "mcversion": "${mcversion}",
    "url": "",

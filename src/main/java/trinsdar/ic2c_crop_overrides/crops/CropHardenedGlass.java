@@ -1,4 +1,4 @@
-package trinsdar.all_the_crops.crops;
+package trinsdar.ic2c_crop_overrides.crops;
 
 import cofh.thermalfoundation.init.TFBlocks;
 import ic2.api.crops.ICropTile;
