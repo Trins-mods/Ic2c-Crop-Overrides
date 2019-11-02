@@ -95,6 +95,7 @@ public class CropJsonLoader extends CropLoader {
                     for (JsonElement el : subObj.getAsJsonArray("stages")){
                         JsonObject test = el.getAsJsonObject();
                         stage = new CropStage(test, false);
+
                         int myIndex = getMyIndex(stage);
                         Ic2cCropOverrides.logger.info(myIndex);
                         stageMap.put(myIndex, stage);
@@ -324,23 +325,27 @@ public class CropJsonLoader extends CropLoader {
     private static int getMyIndex(CropStage stage){
         Field myIndex = null;
         try {
-            myIndex = ReflectionHelper.findField(stage.getClass(), "myIndex", null);
+            myIndex = CropStage.class.getDeclaredField("myIndex");
         } catch (SecurityException e) {
             Ic2cCropOverrides.logger.info("CropStage security deployed");
+        } catch (NoSuchFieldException e) {
+            Ic2cCropOverrides.logger.info("Trying to access CropStage value has failed");
         }
-        int copy;
+        if (myIndex != null){
+            myIndex.setAccessible(true);
+        }
+        int copy = 0;
         try {
             if (myIndex != null) {
-                copy = ((int) myIndex.get(myIndex));
-                return copy;
+                copy = ((int) myIndex.get(stage));
+                Ic2cCropOverrides.logger.info(copy);
             }
         } catch (IllegalArgumentException e) {
             Ic2cCropOverrides.logger.info("Accessed CropStage class but field getter failed");
         } catch (IllegalAccessException e) {
             Ic2cCropOverrides.logger.info("Accessed CropStage class but access denied");
         }
-
-        return 0;
+        return copy;
     }
 
     public static class CropStageOverride extends CropLoader.CropStage{
