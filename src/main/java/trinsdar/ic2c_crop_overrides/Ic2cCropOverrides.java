@@ -77,7 +77,6 @@ public class Ic2cCropOverrides {
         ClassicRecipes.advCrafting.addShapelessRecipe(Ic2Items.coffeePowder, InitItems.itemCoffeeBean);
         TileEntityMacerator.addRecipe(new ItemStack(InitItems.itemCoffeeBean), StackUtil.copyWithSize(Ic2Items.coffeePowder, 3));
         Crops.registerSeeds();
-
     }
 
     @Mod.EventHandler

@@ -130,129 +130,170 @@ public class CropJsonLoader extends CropLoader {
                     if (info.owner.equals("ic2")){
                         if (info.id.equalsIgnoreCase("wheat")){
                             registerCrop(Ic2Crops.cropWheat, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("pumpkin")){
                             registerCrop(Ic2Crops.cropPumpkin, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("melon")){
                             registerCrop(Ic2Crops.cropMelon, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("dandelion")){
                             registerCrop(Ic2Crops.cropYellowFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("rose")){
                             registerCrop(Ic2Crops.cropRedFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("blackthorn")){
                             registerCrop(Ic2Crops.cropBlackFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("tulip")){
                             registerCrop(Ic2Crops.cropPurpleFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("cyazint")){
                             registerCrop(Ic2Crops.cropBlueFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("daisy")){
                             registerCrop(Ic2Crops.cropWhiteFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("venomilia")){
                             registerCrop(Ic2Crops.cropVenomilia, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("rainbow")){
                             registerCrop(Ic2Crops.cropRainbowFlower, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("reed")){
                             registerCrop(Ic2Crops.cropReed, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("stickreed")){
                             registerCrop(Ic2Crops.cropStickReed, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("cocoa")){
                             registerCrop(Ic2Crops.cropCocoa, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("ferru")){
                             registerCrop(Ic2Crops.cropFerru, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("malachite")){
                             registerCrop(Ic2Crops.cropMalachite, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("stannum")){
                             registerCrop(Ic2Crops.cropStannum, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("aurelia")){
                             registerCrop(Ic2Crops.cropAurelia, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("argentum")){
                             registerCrop(Ic2Crops.cropArgentum, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("lumilia")){
                             registerCrop(Ic2Crops.cropGlowstone, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("redwheat")){
                             registerCrop(Ic2Crops.cropRedwheat, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("bluewheat")){
                             registerCrop(Ic2Crops.cropBluewheat, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("netherwart")){
                             registerCrop(Ic2Crops.cropNetherWart, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("terrawart")){
                             registerCrop(Ic2Crops.cropTerraWart, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("glowshroom")){
                             registerCrop(Ic2Crops.cropGlowWart, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("coffee")){
                             registerCrop(Ic2Crops.cropCoffee, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("hops")){
                             registerCrop(Ic2Crops.cropHops, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("carrots")){
                             registerCrop(Ic2Crops.cropCarrots, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("potato")){
                             registerCrop(Ic2Crops.cropPotato, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("redmushroom")){
                             registerCrop(Ic2Crops.cropRedMushroom, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("brownmushroom")){
                             registerCrop(Ic2Crops.cropBrownMushroom, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("cacti")){
                             registerCrop(Ic2Crops.cropCacti, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("tea")){
                             registerCrop(Ic2Crops.cropTea, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("hemp")){
                             registerCrop(Ic2Crops.cropHemp, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("beetroots")){
                             registerCrop(Ic2Crops.cropBeetRoot, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("oaksapling")){
                             registerCrop(Ic2Crops.cropOakSapling, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("sprucesapling")){
                             registerCrop(Ic2Crops.cropSpruceSapling, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("birchsapling")){
                             registerCrop(Ic2Crops.cropBirchSapling, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("junglesapling")){
                             registerCrop(Ic2Crops.cropJungleSapling, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("acaciasapling")){
                             registerCrop(Ic2Crops.cropAcaciaSapling, info, subObj);
+                            reload = true;
                         }
                         if (info.id.equalsIgnoreCase("dark_oaksapling")){
                             registerCrop(Ic2Crops.cropDarkOakSapling, info, subObj);
+                            reload = true;
                         }
                     }
-                } catch (ClassCastException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
