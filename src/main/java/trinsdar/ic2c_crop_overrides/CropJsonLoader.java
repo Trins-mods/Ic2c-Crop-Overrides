@@ -15,7 +15,6 @@ import ic2.core.block.crop.misc.CropLoader;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap;
-import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import it.unimi.dsi.fastutil.objects.ObjectLinkedOpenHashSet;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -24,7 +23,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -97,7 +95,6 @@ public class CropJsonLoader extends CropLoader {
                         stage = new CropStage(test, false);
 
                         int myIndex = getMyIndex(stage);
-                        Ic2cCropOverrides.logger.info(myIndex);
                         stageMap.put(myIndex, stage);
                     }
 
@@ -292,34 +289,15 @@ public class CropJsonLoader extends CropLoader {
                             registerCrop(Ic2Crops.cropDarkOakSapling, info, subObj);
                             reload = true;
                         }
+                        if (info.id.equalsIgnoreCase("plumbilia") && Loader.isModLoaded("ic2c_extras")){
+                            registerCrop(Ic2cExtrasCompat.getCrop(), info, subObj);
+                            reload = true;
+                        }
+                    } else {
+                        Ic2cCropOverrides.logger.info("Sorry, Crop with Owner & ID[owner=" + info.owner + ", ID=" + info.id + "]  not supported at this time.");
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
-                }
-            }
-        }
-
-        if (obj.has("seeds")) {
-            var2 = obj.getAsJsonArray("seeds").iterator();
-
-            while(var2.hasNext()) {
-                element = (JsonElement)var2.next();
-
-                try {
-                    subObj = element.getAsJsonObject();
-                    CropCard card = ClassicCrops.instance.getCropCard(subObj.get("owner").getAsString(), subObj.get("id").getAsString());
-                    if (card == null) {
-                        FMLLog.log.info("Crop Owner & ID not found: [owner=" + subObj.get("owner").getAsString() + ", ID=" + subObj.get("id").getAsString() + "]");
-                    } else {
-                        ItemStack stack = createStack(subObj.getAsJsonObject("seed"));
-                        if (stack.isEmpty()) {
-                            FMLLog.log.info("Stack Not found: " + subObj.getAsJsonObject("seed"));
-                        } else {
-                            ClassicCrops.instance.registerBaseSeed(stack, card, subObj.get("growthStep").getAsInt(), subObj.get("statGrowth").getAsInt(), subObj.get("statGain").getAsInt(), subObj.get("statResistance").getAsInt());
-                        }
-                    }
-                } catch (Exception var12) {
-                    var12.printStackTrace();
                 }
             }
         }
@@ -379,7 +357,6 @@ public class CropJsonLoader extends CropLoader {
         try {
             if (myIndex != null) {
                 copy = ((int) myIndex.get(stage));
-                Ic2cCropOverrides.logger.info(copy);
             }
         } catch (IllegalArgumentException e) {
             Ic2cCropOverrides.logger.info("Accessed CropStage class but field getter failed");
