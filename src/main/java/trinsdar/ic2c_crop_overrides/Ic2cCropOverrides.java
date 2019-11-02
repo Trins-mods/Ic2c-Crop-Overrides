@@ -49,8 +49,6 @@ public class Ic2cCropOverrides {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        ClassicRecipes.advCrafting.addShapelessRecipe(Ic2Items.coffeePowder, InitItems.itemCoffeeBean);
-        TileEntityMacerator.addRecipe(new ItemStack(InitItems.itemCoffeeBean), StackUtil.copyWithSize(Ic2Items.coffeePowder, 3));
         if (Ic2cCropsConfig.redwheat.changeDrops){
             Ic2Crops.instance.registerCropDisplayItem(Ic2Crops.cropRedwheat, GameRegistry.makeItemStack(Ic2cCropsConfig.redwheat.drop2, Ic2cCropsConfig.redwheat.drop2Meta, 1, null));
         }
