@@ -45,6 +45,9 @@ public class Ic2cCropOverrides {
         MinecraftForge.EVENT_BUS.register(this);
         Ic2Crops.cropRedwheat = new CropRedWheat2();
         Ic2Crops.instance.registerCrop(Ic2Crops.cropRedwheat);
+        if (Ic2cCropsConfig.generateExampleJson){
+            JsonMaker.init(event);
+        }
     }
 
     @Mod.EventHandler

@@ -6,6 +6,10 @@ import net.minecraftforge.common.config.Config;
 @Config( modid = Ic2cCropOverrides.MODID, name = "ic2/ic2c_crop_overrides")
 public class Ic2cCropsConfig {
 
+    @Config.Comment("Set this to true to generate an example json in the config/ic2 folder. The file name is overrideCropsExample.json")
+    @Config.RequiresMcRestart
+    public static boolean generateExampleJson = false;
+
     @Config.Comment({
             "Use this to override redwheat if you want the drops to still use the redstone affected drop configuration.",
             "Currently only usable for overriding the drops and whether it requires a block underneath"
