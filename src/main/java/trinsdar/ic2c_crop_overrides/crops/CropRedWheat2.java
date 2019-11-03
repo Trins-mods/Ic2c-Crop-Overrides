@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import trinsdar.ic2c_crop_overrides.Ic2cCropOverrides;
 import trinsdar.ic2c_crop_overrides.Ic2cCropsConfig;
 
 public class CropRedWheat2 extends CropRedWheat {

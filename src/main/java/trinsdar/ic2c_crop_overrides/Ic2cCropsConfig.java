@@ -1,6 +1,5 @@
 package trinsdar.ic2c_crop_overrides;
 
-import ic2.core.block.crop.Ic2Crops;
 import net.minecraftforge.common.config.Config;
 
 @Config( modid = Ic2cCropOverrides.MODID, name = "ic2/ic2c_crop_overrides")
